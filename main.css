@@ -22,7 +22,7 @@ a {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s; }
-  a:hover {}
+  
 
 h1,
 h2,
@@ -40,7 +40,28 @@ h4{
 #portfolio h3{
   color: #fff;
 }
-
+.scrollTop{
+  position: fixed;
+  bottom: 800px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: lime url(up.png);
+  border-radius: 50%;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 100000;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.scrollTop.active{
+  bottom: 40px;
+  visibility: visible;
+  opacity: 1;
+}
 @media screen and (prefers-reduced-motion: reduce) {
   * {
     -webkit-transition: none !important;
@@ -129,6 +150,7 @@ h4{
     margin-bottom: 1em;
     text-align: center;
 }
+
 .container-center{
   margin: 0 auto;
   text-align: center;
